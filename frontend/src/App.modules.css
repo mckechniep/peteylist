@@ -1,0 +1,125 @@
+/* General layout for the app container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Input container styling */
+.toDo-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+.toDo-input-bar {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Add button styling */
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+/* To-do list container styling */
+.toDo-list-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* To-do item styling */
+.toDo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+/* Mark completed items with a different style */
+.toDo-item .complete {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* To-do item title */
+#todo-title {
+  flex: 1;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Delete button styling */
+.delete {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.delete img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  .toDo-input-container,
+  .toDo-list-container {
+    max-width: 100%;
+  }
+
+  .toDo-item {
+    padding: 8px;
+  }
+
+  .toDo-input-bar {
+    font-size: 14px;
+  }
+
+  .add-button {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  #todo-title {
+    font-size: 14px;
+  }
+}

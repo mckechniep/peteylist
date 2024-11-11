@@ -4,7 +4,7 @@ import cors from "cors";
 
 //import other files
 import connectdb from "./mongodb.js";
-// import todoRoute from "./routes/todoRoute.js";
+import toDoRoutes from "./routes/toDoRoutes.js";
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use(cors());
 connectdb();
 
 //define routes
-// app.use("/api", todoRoute);
+app.use("/api", toDoRoutes);
 
 
 //start server
